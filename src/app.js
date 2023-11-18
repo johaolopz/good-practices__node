@@ -1,19 +1,9 @@
-const arr = ['one', 'two', 'four', 'three']
+const { getUUID } = require('./plugins/getuuid.plugin')
 
-const [,,three] = arr
+const buildPerson = ({name, lastName}) => ({
+    id: getUUID(),
+    name,
+    lastName,
+})
 
-const func = {
-    added: (num, cb) => {
-        if (typeof num !== "number") {
-            return cb(`${num} not is a number (NaN)`)
-        }
-        return ++num
-    }
-}
-
-console.log('Using callback: ', func.added('3', (error)=>{
-    if (error) {
-        return error
-    }
-}))
-console.log('Callback test')
+console.log(buildPerson({name: 'Johao', lastName: 'Lopez'}))
