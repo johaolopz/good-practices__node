@@ -1,4 +1,4 @@
-const { getUUID } = require('./plugins/getuuid.plugin')
+const { getUUID, buildLogger } = require('./plugins');
 
 const buildPerson = ({name, lastName}) => ({
     id: getUUID(),
@@ -7,3 +7,8 @@ const buildPerson = ({name, lastName}) => ({
 })
 
 console.log(buildPerson({name: 'Johao', lastName: 'Lopez'}))
+
+// ejemplo de logger winston
+const logger = buildLogger('app.js');
+
+logger.log('This is a text about Log Example')
