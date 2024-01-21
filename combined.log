@@ -1,3 +1,5 @@
 {"level":"info","message":"This is a text about Log Example","service":"user-service"}
 {"level":"info","message":"This is a text about Log Example"}
 {"level":"info","message":"This is a text about Log Example","service":"app.js"}
+{"level":"info","message":"This is a text about Log Example","service":"app.js","timestamp":"2024-01-21T16:27:46.733Z"}
+{"level":"error","message":"error This is a text about ErrorLog Example","service":"app.js","timestamp":"2024-01-21T16:27:46.735Z"}
